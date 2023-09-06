@@ -9,6 +9,7 @@ A small to-do list app running on client-side JavaScript using LocalStorage.
 ## Key Features
 - Add new tasks
 - Delete tasks
+- Edit tasks
 - Mark tasks as complete
 - Filter tasks by status
 - Store tasks in LocalStorage
