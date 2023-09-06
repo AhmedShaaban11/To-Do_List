@@ -1,0 +1,98 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-flow: column;
+}
+
+.app {
+    width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    --task-width: 90%;
+    --task-height: 50px;
+    --task-padding: 15px 15px;
+}
+
+.app > * {
+    width: 100%;
+}
+
+.btn {
+    width: calc(100% - var(--task-width));
+    height: var(--task-height);
+    font-size: 1.3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+
+.add .body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.add .body input {
+    width: var(--task-width);
+    height: var(--task-height);
+    padding: var(--task-padding);
+    font-size: 1rem;
+}
+
+.to-do, .completed {
+    display: flex;
+    flex-direction: column;
+}
+
+.task {
+    width: 100%;
+    min-height: var(--task-height);
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task .body {
+    width: var(--task-width);
+    min-height: inherit;
+    line-height: 1.4;
+    font-size: 1.1rem;
+    box-shadow: 0 0 10px 0px #aaa;
+    border-radius: 5px;
+    padding: var(--task-padding);
+    padding: var(--task-padding);
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    overflow: hidden;
+}
+
+.task .checkbox {
+    cursor: pointer;
+    --square-length: 20px;
+    width: var(--square-length);
+    height: var(--square-length);
+    margin: 0;
+}
+
+.task .text {
+    width: 100%;
+    margin-left: 15px;
+}
+
+.completed .task .body {
+    text-decoration: line-through;
+}
